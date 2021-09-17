@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
+    </head>
+    <body>
+
+
+            <h1>Generate outlines for comparison articles that rank well</h1>
+
+	    <p>For more info, see <a href="/about">about</a>.</p>
+
+        <p><b>Problem 1:</b> Founders want content that ranks well on Google to get exposure.</p>
+
+        <p><b>Problem 2:</b> Consumers want good 'x vs y' style articles to better understand new products/services and to better make decisions between competing products</p>
+
+        <p><b>Problem 3:</b> Sites like 'AlternativeTo', 'Slant' etc generate automated content like this which ranks really well, but is generally lacking in quality and real insights.</p>
+
+        <p><b>Solution: </b> Use our outline generator to find the top 'x vs y' queries on Google. Write great content that is better than the automated alternatives, but with the help of automation for the "boring" parts.</p>
+
+        <p>It's easy to do better than the automated alternatives. Choose to compete for more popular searches, or take advantage of the <a href="https://twitter.com/ahrefs/status/1076538109729406977/">long tail</a> and go for something more niche.</a>
+
+        <p>Enter any keyword below to generate an outline for an article that we think would rank well on Google. Or try one of the following examples: "tesla", "webflow", "telegram", "google", "iphone"</p>
+
+        <p>If you don't like writing, we (<a href="https://ritza.co">Ritza.co</a>) would love to write the full article for you. (<a href="https://www.datarevenue.com/en-blog/airflow-vs-luigi-vs-argo-vs-mlflow-vs-kubeflow">example completed article</a>)</p>
+        <form action="/">
+        <h3>Enter keyword to create outline: </h3>
+        <input type="text" name="seed">
+        <input type="submit" value="Submit">
+        </form>
+
+        <p>Your outline will be generated below. Just copy-paste it into a document to get started.</p>
+
+        <p> Current keyword <b>{{seed}}</b> </p>
+
+        <hr/ >
+
+        <h2>{{title}}</h2>
+
+        {% for heading in headings %}
+        <h3>{{heading[0]}} vs. {{heading[1]}}</h3>
+        <p>{{heading[0]}} is ... while {{heading[1]}} is ...</p>
+
+        <ul>
+            <li>Consider <b>{{heading[0]}}</b> if ...</li>
+            <li>Consider <b>{{heading[1]}}</b> if ...</li>
+        </ul>
+        {% endfor %}
+
+    </body>
+    </html>
